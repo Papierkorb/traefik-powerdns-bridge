@@ -6,9 +6,9 @@ The Traefik PowerDNS Bridge is a simple HTTP bridge that facilitates domain look
 
 Follow these steps to install and set up the Traefik PowerDNS Bridge:
 
-1. Build `cargo build --release` (Assuming you have a working rust compiler)
+1. Build using `cargo build --release`, or if you Docker do `docker run -it --rm -v $PWD:/app -w /app -u $UID:$GID rust:1.78 cargo build --release`
 2. Copy `target/release/traefik-powerdns-bridge` and `traefik-powerdns-bridge.service` to your server
-3. Make any modifications needed to `traefik-powerdns-bridge.service`, fix the path to the binary
+3. Make any modifications needed to `traefik-powerdns-bridge.service` (fix the path to the binary)
 4. Move `traefik-powerdns-bridge.service to /etc/systemd/system/`
 5. Run `sudo systemctl daemon-reload`, then `sudo systemctl enable --now traefik-powerdns-bridge.service`
 6. Install the remote backend, on Ubuntu: `apt install pdns-backend-remote`
