@@ -2,6 +2,8 @@
 
 The Traefik PowerDNS Bridge is a simple HTTP bridge that facilitates domain lookup in a Traefik instance and responds to requests made from PowerDNS. This enables automatic configuration of necessary domain names in your infrastructure.
 
+![The relation between PowerDNS and Traefik](relation.drawio.png)
+
 ## Installation
 
 Follow these steps to install and set up the Traefik PowerDNS Bridge:
